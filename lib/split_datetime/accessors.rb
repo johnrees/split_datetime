@@ -9,7 +9,6 @@ module SplitDatetime
       end
 
       attrs.each do |attr|
-        attr_accessible "#{attr}_date", "#{attr}_hour", "#{attr}_min"
 
         define_method(attr) do
           super() || opts[:default].call
